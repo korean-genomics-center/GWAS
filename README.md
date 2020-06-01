@@ -70,7 +70,36 @@ CovariateA,CovariateB,CovariateC
 
 7. The name of output file
 
+#### Run
+```
+Example from "Korean Genome Project: 1094 Korean personal genomes with clinical information" paper
+plink \
+--bfile input_plink_file_name \
+--pheno phenotype.txt \
+--pheno-name Amylase \
+--covar covaraite.txt \
+--covar-name Age,Age_sq,BMI,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+--linear hide-covar sex \
+--ci 0.95 --prune --memory 10000 --adjust  \
+--out gwas_amylase
+```
+
+#### Citation
+1. PLINK: A tool set for whole-genome association and population-based linkage analyses\\
 
 
+### Step 3. Draw manhattan plot and q-q plot by using "Draw_QQPlotAndManhattanPlot_ByUsingQQMAN.R" 
 
+#### Inputs
+1. GWAS result from step 2
+
+#### Run
+```
+library(qqman)
+library(data.table)
+
+dt <- fread("gwas_amylase.assoc.linear")
+manhattan(dt,col = c("blue4", "orange3"))
+qq(dt$P)
+```
 
