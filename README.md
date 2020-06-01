@@ -95,6 +95,8 @@ plink \
 
 #### Run
 ```
+Example from "Korean Genome Project: 1094 Korean personal genomes with clinical information" paper
+
 library(qqman)
 library(data.table)
 
