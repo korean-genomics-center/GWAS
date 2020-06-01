@@ -37,12 +37,6 @@ https://www.cog-genomics.org/plink/1.9/
 ```
 
 2. PLINK binalry formatted file
-```
-example
-plink.bed
-plink.fam
-plink.bim
-```
 
 3. Phenotype file
 ```
@@ -54,8 +48,26 @@ Gamma\tGamma\t0\t1.2\t1.6\n
 ```
 
 4. The name of target phenotype
+```
+Example
+PhenotypeA or PhenotypeB or PhenotypeC (per each)
+```
+
 5. Covariate file
+```
+Format as below
+FID\tIID\tCovariateA\tCovariateB\tCovariateC\n
+Alpha\tAlpha\t1\t46\t0.4\n
+Beta\tBeta\t2\t55\t0.02\n
+Gamma\tGamma\t1\t27\t-0.001\n
+```
+
 6. The name of target covarate
+```
+Example
+CovariateA,CovariateB,CovariateC
+```
+
 7. The name of output file
 
 
