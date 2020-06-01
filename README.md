@@ -102,4 +102,4 @@ dt <- fread("gwas_amylase.assoc.linear")
 manhattan(dt,col = c("blue4", "orange3"))
 qq(dt$P)
 ```
-
+ 
